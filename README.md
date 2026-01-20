@@ -50,6 +50,7 @@ För varje ny funktion eller ändring skapades en ny branch:
 
 ```bash
 git checkout -b feature-namn
+```
 
 
 ## Webbplats URL
