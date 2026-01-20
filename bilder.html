@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>labb1 | Bilder</title>
     <link rel="stylesheet" href="/src/css/common.css">
+    <link rel="stylesheet" href="/src/css/bilder.css">
     <script src="/src/js/common.js" defer></script>
 </head>
+
 <body>
     <!--header + nav-->
     <header>
@@ -20,7 +23,7 @@
         </div>
         <nav id="nav" class="hide-left">
             <ul>
-                <li><a  href="/">hem</a></li>
+                <li><a href="/">hem</a></li>
                 <li><a class="active" href="/bilder">bilder</a></li>
                 <li><a href="/arbetsprocess">arbetsprocess</a></li>
             </ul>
@@ -30,7 +33,35 @@
     <div id="overlay"></div>
 
     <!--main-->
-    <main></main>
+    <main>
+        <h1>bilder</h1>
+        <picture>
+            <source srcset="/images/img1.avif" type="image/avif">
+            <source srcset="/images/img1.webp" type="image/webp">
+            <img src="/images/img1.jpg" alt="Abstrakta tärningar och en månghörning" fetchpriority="high">
+        </picture>
+        <picture>
+            <source srcset="/images/img2.avif" type="image/avif">
+            <source srcset="/images/img2.webp" type="image/webp">
+            <img src="/images/img2.jpg" alt="Abstrakt ansikte" fetchpriority="high">
+        </picture>
+        <picture>
+            <source srcset="/images/img3.avif" type="image/avif">
+            <source srcset="/images/img3.webp" type="image/webp">
+            <img src="/images/img3.jpg"
+                alt="Abstrakt sammansättning av fyrhörningar, cirklar och trädliknande strukturer" loading="lazy">
+        </picture>
+        <picture>
+            <source srcset="/images/img4.avif" type="image/avif">
+            <source srcset="/images/img4.webp" type="image/webp">
+            <img src="/images/img4.jpg" alt="Abstrakt figurer föreställande en dröm" loading="lazy">
+        </picture>
+        <picture>
+            <source srcset="/images/img5.avif" type="image/avif">
+            <source srcset="/images/img5.webp" type="image/webp">
+            <img src="/images/img5.jpg" alt="Abstrakt rymd" loading="lazy">
+        </picture>
+    </main>
 
     <!--footer-->
     <footer>
@@ -39,4 +70,5 @@
         </address>
     </footer>
 </body>
+
 </html>
