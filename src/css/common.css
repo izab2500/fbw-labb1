@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #FFFFFF;
+    height: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+}
+
+header,
+main,
+footer {
+    padding-inline: 30px;
+}
+
+.active {
+    border: 3px dotted darkorange;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(248, 248, 248);
+    padding-top: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+}
+
+header>div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .mobile-menue {
+    cursor: pointer;
+}
+
+header .mobile-menue>div {
+    height: 3px;
+    width: 30px;
+    background-color: black;
+}
+
+header .middle-bar {
+    margin: 5px 0;
+}
+
+header .logo {
+    height: 35px;
+    width: 100px;
+    background-color: black;
+    color: lightgrey;
+    text-align: center;
+    line-height: 31px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 3px solid gold;
+    border-right: 3px solid gold;
+    border-bottom: 3px solid darkorange;
+    border-left: 3px solid darkorange;
+    border-radius: 5px;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+header ul li:last-child {
+    margin-right: 40px;
+}
+
+header a {
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: black;
+    border: 3px dotted transparent;
+    padding: 4px;
+    transition: border 0.25s linear;
+}
+
+header a:hover:not(.active) {
+    border: 3px dotted darkorange;
+}
+
+/**js**/
+.mobile-menue.hidden {
+    display: none;
+}
+
+.mobile-menue>.top-bar-js {
+    position: relative;
+    top: 8px;
+    transform: rotate(45deg);
+    background-color: darkred;
+    z-index: 20;
+}
+
+.mobile-menue>.middle-bar-js {
+    position: relative;
+    transform: rotate(-45deg);
+    background-color: darkred;
+    z-index: 20;
+}
+
+.mobile-menue>.bottom-bar-js {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/**media queries**/
+@media (max-width:670px) {
+    .mobile-menue.hidden {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        left: -9px;
+        top: 63px;
+        background-color: rgb(248, 248, 248);
+        z-index: 20;
+        transition: transform 0.3s ease;
+    }
+
+    header nav.hide-left {
+        transform: translate(-100%);
+
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding: 40px 0;
+        border: 1px solid black;
+    }
+}
