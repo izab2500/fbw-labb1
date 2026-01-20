@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>labb1 | Arbetsprocess</title>
     <link rel="stylesheet" href="/src/css/common.css">
+    <link rel="stylesheet" href="/src/css/arbetsprocess.css">
     <script src="/src/js/common.js" defer></script>
 </head>
 
@@ -32,7 +33,104 @@
     <div id="overlay"></div>
 
     <!--main-->
-    <main></main>
+    <main>
+        <section>
+            <h1>arbetsprocess</h1>
+            <article>
+                <h2>Installation av Vite.js</h2>
+                <p>
+                    Först installerade jag <strong>Vite.js</strong>, vilket resulterade i att en filstruktur skapades.
+                    Bland dessa filer fanns en <code>.gitignore</code>, som anger vilka filer och mappar som
+                    inte ska versionshanteras eller skickas till GitHub.
+                </p>
+            </article>
+
+            <article>
+                <h2>Skapande av mappstruktur</h2>
+                <p>
+                    I mappen <code>src</code> skapade jag två mappar: <code>js</code> och <code>css</code>.
+                    I <code>css</code>-mappen har jag en huvudfil som används för allmän styling,
+                    samt separata filer för unik styling för varje sida. Detta gör det enkelt att
+                    hantera och underhålla de olika stilfilerna (i detta fall var det bara för att öva in det).
+                </p>
+            </article>
+
+            <article>
+                <h2>Konfiguration av Vite</h2>
+                <p>
+                    Jag skapade en <code>vite.config.js</code>-fil där jag gjorde de nödvändiga
+                    inställningarna för min multipages HTML-webbplats. Dessutom installerade
+                    och konfigurerade jag <strong>npm-paketen</strong> <code>vite-plugin-image-optimizer</code>
+                    och <code>shap</code> för att optimera bilder i formaten <strong>AVIF</strong>,
+                    <strong>WebP</strong> och <strong>JPG</strong> vid npm run build.
+                </p>
+            </article>
+
+            <article>
+                <h2>Versionshantering med Git</h2>
+                <p>
+                    Sedan skapade jag en lokal Git-repository med kommandot <code>git init</code>,
+                    kopplade den till ett fjärrrepository på <strong>GitHub</strong> och
+                    <strong>Netlify</strong>. Jag ställde in så att <code>npm install</code> och
+                    <code>npm build</code> triggas automatiskt för <code>dist</code>-mappen
+                    i mitt projekt för varje "push" till fjärrrepot och <strong>main</strong>-grenen.
+                </p>
+            </article>
+
+            <article>
+                <h2>Arbete med Feature-branches</h2>
+                <p>
+                    För utvecklingen använde jag <strong>feature branches</strong>. Jag skapade en
+                    ny branch med <code>git checkout -b feature-namn</code>,
+                    där jag utvecklade ett element med motsvarande HTML, CSS och
+                    JavaScript. Lokala tester genomfördes för att säkerställa att allt
+                    fungerade som det skulle innan commit och push till fjärrrepot.
+                </p>
+                <br>
+                <p>
+                    När jag var klar med utvecklingen lade jag till ändringarna till staging med
+                    <code>git add .</code> och skapade en commit med
+                    <code>git commit -m "Meddelande på imperativ form"</code>. Därefter
+                    pushade jag till fjärrrepositoryt med
+                    <code>git push -u origin feature-namn</code> och skapade en
+                    <strong>pull request</strong> på GitHub. Här beskrev jag vad jag hade gjort,
+                    under antagande att andra skulle granska ändringarna.
+                </p>
+            </article>
+
+            <article>
+                <h2>Uppdatering av Main</h2>
+                <p>
+                    Efter att min branch hade mergeats till <strong>main</strong> på GitHub
+                    raderade jag feature-branchen. Lokalt bytte jag tillbaka till
+                    <strong>main</strong>-grenen med <code>git checkout main</code>
+                    och raderade feature-branchen med <code>git branch -d feature-namn</code>.
+                    För att hålla min lokala <strong>main</strong> uppdaterad drog jag in de senast
+                    ändringarna från fjärrrepositoryt med <code>git pull origin main</code>. Sedan startade jag
+                    processen på nytt...
+                </p>
+            </article>
+
+            <article>
+                <h2>Slutligen</h2>
+                <p>
+                    När webbplatsen var färdigställd och all kod hade pushats till GitHub, kontrollerade jag så att allt
+                    fungerade lokalt, inklusive
+                    responsivitet i de vanligaste webbläsarna. Jag körde sedan <code>npm run build</code> och granskade
+                    loggarna. Efter det
+                    körde jag <code>npm run preview</code> för att säkerställa att den optimerade versionen av
+                    webbplatsen fungerade som avsett.
+                    Avslutningsvis testade jag webbplatsen via Netlifys URL.
+                </p>
+                <br>
+                <p>
+                    Sedan skrev jag <code>README.md</code>-fil för att
+                    dokumentera projektet och för att lägga till mitt repos URL.
+                </p>
+            </article>
+
+        </section>
+    </main>
 
     <!--footer-->
     <footer>
