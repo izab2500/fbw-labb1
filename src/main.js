@@ -1,4 +1,9 @@
-"use strict"
+//css 
+import "./css/common.css"
+import "./css/hem.css"
+import "./css/bilder.css"
+import "./css/arbetsprocess.css"
+
 
 if (window.matchMedia("(max-width:670px)").matches) {
     //dom referenser
@@ -9,7 +14,7 @@ if (window.matchMedia("(max-width:670px)").matches) {
     const nav = document.querySelector("#nav");
     const overlay = document.querySelector("#overlay");
 
-console.log(overlay)
+    console.log(overlay)
     // visa eller dölj ikon (hamburger eller X), nav och overlay
     function toggle(evt) {
         const target = evt.target.closest("#icon")
