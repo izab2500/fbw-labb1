@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/bilder", "destination": "/bilder.html" },
+    { "source": "/arbetsprocess", "destination": "/arbetsprocess.html" }
+  ]
+}
