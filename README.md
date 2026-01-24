@@ -1,6 +1,6 @@
 # Frontend baserad webbutveckling – Laboration 1
 
-Detta projekt är en del av Laboration 1 i kursen *Frontend baserad webbutveckling*. Syftet med laborationen är att sätta upp ett modernt frontend-arbetsflöde med **Vite**, arbeta med **versionshantering i Git**, samt publicera en webbplats via **Netlify**.
+Detta projekt är en del av Laboration 1 i kursen *Frontend baserad webbutveckling*. Syftet med laborationen är att sätta upp ett modernt frontend-arbetsflöde med **Vite**, arbeta med **versionshantering i Git**, samt publicera en webbplats via **Vercel**.
 
 ---
 
@@ -36,7 +36,7 @@ Dessa används för att optimera bilder automatiskt vid `npm run build`, med st�
 ### Versionshantering med Git
 Projektet versionshanterades med **Git**.  
 Ett lokalt repository skapades med `git init` och kopplades till ett fjärrrepository på **GitHub**.  
-Repositoryt kopplades även till **Netlify**, där varje push till `main` automatiskt triggar:
+Repositoryt kopplades även till **Vercel**, där varje push till `main` automatiskt triggar:
 
 1. `npm install`
 2. `npm run build`
@@ -55,8 +55,7 @@ git checkout -b feature-namn
 
 ## Webbplats URL
 
-splendorous-kataifi-5cd2ae.netlify.app
-
+https://fbw-labb1.vercel.app/
 ---
 
 ## Klona repot
